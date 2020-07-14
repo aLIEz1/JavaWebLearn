@@ -10,16 +10,19 @@ import java.io.IOException;
 import java.net.URL;
 import java.net.URLEncoder;
 
-public class FIleServlet extends HttpServlet {
+/**
+ * @author super
+ */
+public class FileServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String path = "C:\\Users\\super\\IdeaProjects\\" +
                 "JavaWebLearn\\ServletTest\\src\\main\\resources\\java.pdf";
 
-        FileDownloader(resp,path);
+        fileDownloader(resp,path);
     }
 
-    private void FileDownloader(HttpServletResponse resp,String path) throws IOException {
+    private void fileDownloader(HttpServletResponse resp, String path) throws IOException {
         System.out.println("下载文件的路径"+path);
         String fileName = path.substring(path.lastIndexOf("\\") + 1);
         //中文文件名让URLEncoder.encode编码

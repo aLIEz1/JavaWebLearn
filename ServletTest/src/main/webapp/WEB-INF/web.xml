@@ -50,7 +50,7 @@
     
     <servlet>
         <servlet-name>FIleServlet</servlet-name>
-        <servlet-class>com.lm.FIleServlet</servlet-class>
+        <servlet-class>com.lm.FileServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>FIleServlet</servlet-name>
