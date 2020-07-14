@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                      http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <display-name>Archetype Created Web Application</display-name>
+    <context-param>
+        <param-name>jdbcUrl</param-name>
+        <param-value>jdbc:mysql://localhost:3306</param-value>
+    </context-param>
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>com.lm.HelloServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>GetServlet</servlet-name>
+        <servlet-class>com.lm.GetServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetServlet</servlet-name>
+        <url-pattern>/getServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>DispatchServlet</servlet-name>
+        <servlet-class>com.lm.DispatchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DispatchServlet</servlet-name>
+        <url-pattern>/dp</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>PropertiesServlet</servlet-name>
+        <servlet-class>com.lm.PropertiesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PropertiesServlet</servlet-name>
+        <url-pattern>/ps</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>FIleServlet</servlet-name>
+        <servlet-class>com.lm.FIleServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>FIleServlet</servlet-name>
+        <url-pattern>/fs</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ImageServlet</servlet-name>
+        <servlet-class>com.lm.ImageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ImageServlet</servlet-name>
+        <url-pattern>/ims</url-pattern>
+    </servlet-mapping>
+</web-app>
