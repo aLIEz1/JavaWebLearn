@@ -20,7 +20,7 @@
         <servlet-name>HelloServlet</servlet-name>
         <url-pattern>/hello</url-pattern>
     </servlet-mapping>
-    
+
     <servlet>
         <servlet-name>GetServlet</servlet-name>
         <servlet-class>com.lm.GetServlet</servlet-class>
@@ -29,7 +29,7 @@
         <servlet-name>GetServlet</servlet-name>
         <url-pattern>/getServlet</url-pattern>
     </servlet-mapping>
-    
+
     <servlet>
         <servlet-name>DispatchServlet</servlet-name>
         <servlet-class>com.lm.DispatchServlet</servlet-class>
@@ -38,7 +38,7 @@
         <servlet-name>DispatchServlet</servlet-name>
         <url-pattern>/dp</url-pattern>
     </servlet-mapping>
-    
+
     <servlet>
         <servlet-name>PropertiesServlet</servlet-name>
         <servlet-class>com.lm.PropertiesServlet</servlet-class>
@@ -47,7 +47,7 @@
         <servlet-name>PropertiesServlet</servlet-name>
         <url-pattern>/ps</url-pattern>
     </servlet-mapping>
-    
+
     <servlet>
         <servlet-name>FIleServlet</servlet-name>
         <servlet-class>com.lm.FileServlet</servlet-class>
@@ -56,7 +56,7 @@
         <servlet-name>FIleServlet</servlet-name>
         <url-pattern>/fs</url-pattern>
     </servlet-mapping>
-    
+
     <servlet>
         <servlet-name>ImageServlet</servlet-name>
         <servlet-class>com.lm.ImageServlet</servlet-class>
@@ -65,4 +65,33 @@
         <servlet-name>ImageServlet</servlet-name>
         <url-pattern>/ims</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RedirectServlet</servlet-name>
+        <servlet-class>com.lm.RedirectServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RedirectServlet</servlet-name>
+        <url-pattern>/rs</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RequestServlet</servlet-name>
+        <servlet-class>com.lm.RequestServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RequestServlet</servlet-name>
+        <url-pattern>/reqs</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>cookieServlet</servlet-name>
+        <servlet-class>com.lm.CookieServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cookieServlet</servlet-name>
+        <url-pattern>/cs</url-pattern>
+    </servlet-mapping>
+
 </web-app>
