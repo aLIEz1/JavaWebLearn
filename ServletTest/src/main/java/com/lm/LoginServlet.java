@@ -1,5 +1,7 @@
 package com.lm;
 
+import com.lm.utils.Constant;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,7 +16,7 @@ public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String username = req.getParameter("username");
         if ("admin".equals(username)){
-            req.getSession().setAttribute("USER_SESSION",req.getSession().getId());
+            req.getSession().setAttribute(Constant.USER_SESSION,req.getSession().getId());
             resp.sendRedirect("/loginFlow/home.jsp");
         }else {
             resp.sendRedirect("/loginFlow/error.jsp");

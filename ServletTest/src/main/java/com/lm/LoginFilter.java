@@ -1,5 +1,7 @@
 package com.lm;
 
+import com.lm.utils.Constant;
+
 import javax.servlet.*;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,7 +16,7 @@ public class LoginFilter implements Filter {
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
         HttpServletRequest request= (HttpServletRequest)servletRequest;
         HttpServletResponse response= (HttpServletResponse) servletResponse;
-        if (request.getSession().getAttribute("USER_SESSION")==null) {
+        if (request.getSession().getAttribute(Constant.USER_SESSION)==null) {
             response.sendRedirect("/login.jsp");
         }
         filterChain.doFilter(servletRequest,servletResponse);
