@@ -17,7 +17,6 @@ public class RequestServlet extends HttpServlet {
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         //返回用户名和密码
-//        resp.getWriter().println(username +":"+ password);
         resp.sendRedirect("/ServletTest_war//success.jsp");
     }
 

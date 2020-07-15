@@ -15,7 +15,7 @@ public class HelloServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter writer = resp.getWriter();
-        writer.println("Hello Servlet");
+        writer.println("你好，世界");
         ServletContext context = this.getServletContext();
         String user = "Good";
         //将一个数据保存在ServletContext中，名字为username,对象为user

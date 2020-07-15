@@ -12,10 +12,22 @@
         <param-name>jdbcUrl</param-name>
         <param-value>jdbc:mysql://localhost:3306</param-value>
     </context-param>
+    <filter>
+        <filter-name>characterEncodingFilter</filter-name>
+        <filter-class>com.lm.CharacterEncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>characterEncodingFilter</filter-name>
+        <url-pattern>/servlet/*</url-pattern>
+    </filter-mapping>
     <servlet>
         <servlet-name>HelloServlet</servlet-name>
         <servlet-class>com.lm.HelloServlet</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/servlet/hello</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>HelloServlet</servlet-name>
         <url-pattern>/hello</url-pattern>
