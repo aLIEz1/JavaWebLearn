@@ -16,9 +16,17 @@
         <filter-name>characterEncodingFilter</filter-name>
         <filter-class>com.lm.CharacterEncodingFilter</filter-class>
     </filter>
+    <filter>
+        <filter-name>loginFilter</filter-name>
+        <filter-class>com.lm.LoginFilter</filter-class>
+    </filter>
     <filter-mapping>
         <filter-name>characterEncodingFilter</filter-name>
         <url-pattern>/servlet/*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>loginFilter</filter-name>
+        <url-pattern>/loginFlow/*</url-pattern>
     </filter-mapping>
     <servlet>
         <servlet-name>HelloServlet</servlet-name>
@@ -105,5 +113,24 @@
         <servlet-name>cookieServlet</servlet-name>
         <url-pattern>/cs</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>com.lm.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>logoutServlet</servlet-name>
+        <servlet-class>com.lm.LogoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/servlet/login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>logoutServlet</servlet-name>
+        <url-pattern>/servlet/logout</url-pattern>
+    </servlet-mapping>
+
+
 
 </web-app>

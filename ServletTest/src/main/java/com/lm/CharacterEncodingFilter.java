@@ -10,6 +10,7 @@ public class CharacterEncodingFilter implements Filter {
 
     /**
      * 初始化
+     * web 服务器启动的时候Filter启动
      * @param filterConfig
      * @throws ServletException
      */
@@ -40,6 +41,7 @@ public class CharacterEncodingFilter implements Filter {
 
     /**
      * 销毁
+     * web 服务器销毁的时候Filter销毁
      */
     @Override
     public void destroy() {
