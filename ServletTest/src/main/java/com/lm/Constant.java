@@ -1,4 +1,4 @@
-package com.lm.utils;
+package com.lm;
 
 /**
  * @author super
