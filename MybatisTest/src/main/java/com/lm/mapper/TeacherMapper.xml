@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lm.mapper.TeacherMapper">
+
+    <select id="getTeacherList" resultMap="TeacherStudentMap">
+        select *
+        from mybatis.teacher as t
+                 left join mybatis.student as s on t.id = s.tid
+    </select>
+    <select id="getTeacherList2" resultMap="TeacherStudentMap2">
+        select t.name tname, t.id tid, s.name sname, s.id sid
+        from mybatis.teacher t,
+             mybatis.student s
+        where t.id = s.id
+    </select>
+    <resultMap id="TeacherStudentMap" type="Teacher">
+        <id column="id" property="id"/>
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <collection property="students" javaType="list" ofType="student">
+            <id column="id" property="id"/>
+            <result column="name" property="name"/>
+        </collection>
+    </resultMap>
+
+    <resultMap id="TeacherStudentMap2" type="Teacher">
+        <result property="id" column="tid"/>
+        <result property="name" column="tname"/>
+        <collection property="students" javaType="list" ofType="Student">
+            <result property="name" column="sname"/>
+            <result property="id" column="sid"/>
+        </collection>
+    </resultMap>
+</mapper>

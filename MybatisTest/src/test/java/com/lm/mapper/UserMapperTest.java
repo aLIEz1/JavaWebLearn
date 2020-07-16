@@ -3,15 +3,13 @@ package com.lm.mapper;
 import com.lm.pojo.User;
 import com.lm.utils.MybatisUtils;
 import org.apache.ibatis.session.SqlSession;
-import org.apache.log4j.Logger;
 import org.junit.Test;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class UserMapperTest {
-    static Logger logger = Logger.getLogger(UserMapperTest.class);
+class UserMapperTest {
 
 
     @Test
@@ -83,12 +81,6 @@ public class UserMapperTest {
         }
     }
 
-    @Test
-    public void testLog4j() {
-        logger.info("进入了testLog4j info");
-        logger.debug("进入了testLog4j debug");
-        logger.error("进入了testLog4j error");
-    }
 }
 
 
