@@ -7,6 +7,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.junit.jupiter.api.Test;
 
 import java.util.Date;
+import java.util.HashMap;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -32,6 +33,18 @@ class BlogMapperTest {
             blog.setId(IdUtils.getId());
             blog.setTitle("SpringBoot");
             mapper.addBlog(blog);
+        }
+    }
+
+    @Test
+    void testQueryBlogIf() {
+        try (SqlSession sqlSession =MybatisUtils.getSqlSession()){
+            HashMap<String, Object> map = new HashMap<>();
+            map.put("title","Java");
+            for (Blog blog : sqlSession.getMapper(BlogMapper.class).queryBlogIf(map)) {
+                System.out.println(blog);
+            }
+
         }
     }
 }

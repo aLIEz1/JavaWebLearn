@@ -6,6 +6,16 @@
 
     <insert id="addBlog" parameterType="Blog">
         insert into mybatis.blog(id, title, author, create_time, views)
-         VALUE (#{id},#{title},#{author},#{createTime},#{views})
+            VALUE (#{id}, #{title}, #{author}, #{createTime}, #{views})
     </insert>
+    <select id="queryBlogIf" resultType="Blog">
+        select *
+        from mybatis.blog where true
+        <if test="title!=null">
+            and title = #{title}
+        </if>
+        <if test="author!=null">
+            and author = #{author}
+        </if>
+    </select>
 </mapper>
